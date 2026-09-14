@@ -569,7 +569,22 @@ h1, h2, h3, h4 {
     text-align: right;
   }
 }
+.philosophy-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
 
+.philosophy-ar {
+  direction: rtl;
+  text-align: right;
+}
+
+.philosophy-en {
+  direction: ltr;
+  text-align: left;
+}
 .philosophy-text {
   font-family: var(--font-arabic);
   direction: rtl;
