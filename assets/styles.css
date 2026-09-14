@@ -576,8 +576,8 @@ h1, h2, h3, h4 {
   max-width: 900px;
   margin: 0 auto;
   box-sizing: border-box;
-  overflow-wrap: normal;
-  word-wrap: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   word-break: normal;
 }
 /* English */
@@ -585,13 +585,13 @@ h1, h2, h3, h4 {
   font-family: var(--font-english);
   direction: ltr;
   text-align: left;
-  display: none;
 }
 /* Arabic */
 .philosophy-text:not(.philosophy-text--en) {
   font-family: var(--font-arabic);
   direction: rtl;
   text-align: right;
+}
 }
 .pull-quote__english {
   display: block;
