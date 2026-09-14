@@ -568,54 +568,23 @@ h1, h2, h3, h4 {
   .piece-section:has(.philosophy-text) .philosophy-text:not(.philosophy-text--en) {
     text-align: right;
   }
-.piece-section:has(.philosophy-text) .container {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  column-gap: clamp(3rem, 7vw, 7rem);
-  align-items: start;
 }
 
-.piece-section:has(.philosophy-text) .piece-section__label {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.piece-section:has(.philosophy-text) .piece-section__label-ar {
-  grid-column: 2;
-  grid-row: 1;
-  text-align: right;
-}
-
-.piece-section:has(.philosophy-text) .philosophy-text--en {
-  grid-column: 1;
-  grid-row: 2;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  direction: ltr;
-  text-align: left;
-  font-family: var(--font-body);
-  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
-  line-height: 1.7;
-}
-
-.piece-section:has(.philosophy-text) .philosophy-text:not(.philosophy-text--en) {
-  grid-column: 2;
-  grid-row: 2;
-  width: 100%;
-  max-width: none;
-  margin: 0;
+.philosophy-text {
+  font-family: var(--font-arabic);
   direction: rtl;
   text-align: right;
-  font-family: var(--font-arabic);
-  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
-  line-height: 2;
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  line-height: 2.1;
+  max-width: min(46rem, 100%);
+  width: 100%;
+  margin: 0 0 0 auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
 }
-.pull-quote__english {
-  display: block;
-  margin-top: 12px;
-  direction: ltr;
-}
+
 /* pull quote / artist statement */
 .pull-quote {
   position: relative;
