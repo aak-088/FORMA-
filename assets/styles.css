@@ -570,15 +570,15 @@ h1, h2, h3, h4 {
   }
 }
 .philosophy-text {
-  font-size: clamp(1.35rem, 2vw, 1.65rem);
-  line-height: 2.1;
-  max-width: min(46rem, 100%);
+  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+  line-height: 2;
   width: 100%;
-  margin: 0 0 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
   box-sizing: border-box;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
+  overflow-wrap: normal;
+  word-wrap: normal;
+  word-break: normal;
 }
 /* English */
 .philosophy-text--en {
