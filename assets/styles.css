@@ -568,30 +568,48 @@ h1, h2, h3, h4 {
   .piece-section:has(.philosophy-text) .philosophy-text:not(.philosophy-text--en) {
     text-align: right;
   }
+.piece-section:has(.philosophy-text) .container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: clamp(3rem, 7vw, 7rem);
+  align-items: start;
 }
-.philosophy-text {
-  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
-  line-height: 2;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: normal;
+
+.piece-section:has(.philosophy-text) .piece-section__label {
+  grid-column: 1;
+  grid-row: 1;
 }
-/* English */
-.philosophy-text--en {
-  font-family: var(--font-english);
-  direction: ltr;
-  text-align: left;
-}
-/* Arabic */
-.philosophy-text:not(.philosophy-text--en) {
-  font-family: var(--font-arabic);
-  direction: rtl;
+
+.piece-section:has(.philosophy-text) .piece-section__label-ar {
+  grid-column: 2;
+  grid-row: 1;
   text-align: right;
 }
+
+.piece-section:has(.philosophy-text) .philosophy-text--en {
+  grid-column: 1;
+  grid-row: 2;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  direction: ltr;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  line-height: 1.7;
+}
+
+.piece-section:has(.philosophy-text) .philosophy-text:not(.philosophy-text--en) {
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  direction: rtl;
+  text-align: right;
+  font-family: var(--font-arabic);
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  line-height: 2;
 }
 .pull-quote__english {
   display: block;
