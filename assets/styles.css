@@ -570,34 +570,28 @@ h1, h2, h3, h4 {
   }
 }
 .philosophy-text {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-}
-
-.philosophy-ar {
-  direction: rtl;
-  text-align: right;
-}
-
-.philosophy-en {
-  direction: ltr;
-  text-align: left;
-}
-.philosophy-text {
-  font-family: var(--font-arabic);
-  direction: rtl;
-  text-align: right;
   font-size: clamp(1.35rem, 2vw, 1.65rem);
   line-height: 2.1;
   max-width: min(46rem, 100%);
   width: 100%;
   margin: 0 0 0 auto;
+  box-sizing: border-box;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
-  box-sizing: border-box;
+}
+/* English */
+.philosophy-text--en {
+  font-family: var(--font-english);
+  direction: ltr;
+  text-align: left;
+  display: none;
+}
+/* Arabic */
+.philosophy-text:not(.philosophy-text--en) {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  text-align: right;
 }
 .pull-quote__english {
   display: block;
